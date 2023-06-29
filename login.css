@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans',sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c3e0e5;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #274472;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.logo {
+    width: 150px;
+}
+
+.logoName {
+    color: #c3e0e5;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin-top: 25px;
+}
+
+.ui {
+    height: 25px;
+    padding-left: 5px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 5px;
+    font-size: smaller;
+    background-color: #c3e0e5;
+    color: #274472;
+}
+
+.ui::placeholder {
+    color: #274472;
+}
+
+.submit {
+    margin-top: 15px;
+    height: 30px;
+    background-color: #5885af;
+    color: #c3e0e5;
+    border: 1px solid #5885af;
+    border-radius: 5px;
+    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition: background-color 0.1s;
+}
+
+.submit:hover {
+    background-color: #c3e0e5;
+    color: #274472;
+}
