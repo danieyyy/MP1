@@ -7,7 +7,7 @@
 
 body{
     background-color: #c3e0e5;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .main {
@@ -79,16 +79,18 @@ body{
     width: 15%;
     background-color: #274472;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     position: absolute;
     color: #c3e0e5;
     min-width: max-content;
 }
 
 .navbar__link {
+    display: flex;
     text-decoration: none;
     color: #c3e0e5;
     font-size: x-large;
+    padding: 0;
 }
 
 .navbar__item {
@@ -111,20 +113,29 @@ body{
     margin: 50px 0px 50px 0px;
 }
 
+.navbarIcon {
+    width: 0px;
+}
+
 /* Content Area */
 
 .content {
     display: flex;
     margin-left: 15%;
     color: #274472;
-    height: 100vh;
+    overflow: scroll;
 }
 
+/* .contentSpecs {
+    flex-grow: 1;
+} */
+
 .contentMain {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 0 390px 0 50px;
+    margin: 0 0 0 50px;
+    flex-grow: 1;
+    /* overflow: scroll; */
 }
 
 #piechart {
@@ -151,12 +162,13 @@ body{
 }
 
 .contentTodo {
-    position: absolute;
-    right: 25px;
+    display: flex;
+    flex-direction: column;
     width: 260px;
     height: 500px;
     background-color: #41729f;
     padding: 20px;
+    margin-right: 50px;
 }
 
 .contentTodo__title {
@@ -193,8 +205,6 @@ body{
     justify-content: center;
     background-color: #5885af;
     height: 60px;
-    width: 100%;
+    margin-left: 15%;
     color: #c3e0e5;
-    position: fixed;
-    bottom: 0;
 }
