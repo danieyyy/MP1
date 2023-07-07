@@ -111,11 +111,28 @@ body{
     margin: 50px 0px 50px 0px;
 }
 
+.navbar a{
+    text-decoration: none;
+    color: #c3e0e5;
+    font-size: x-large;
+}
+
+.navbar a.active{
+    background-color: #5885af;
+    color: #c3e0e5;
+    border-radius: 20px;
+    padding: 10px 15px 10px 15px;
+}
+
 /* Content Area */
 
 .content {
     margin-left: 20%;
     color: #274472;
+}
+
+.main{
+    display: flex;
 }
 
 .titleHead{
@@ -129,20 +146,19 @@ table {
     border-collapse: collapse;
     margin-top: 50px;
     margin-bottom: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 90%;
   }
   
   td, th {
     border: 2px solid #274472;
-    text-align: center;
+    text-align: left;
     padding: 10px;
   }
 
   th{
     background-color: #5885af;
     color: #c3e0e5;
+    font-weight: bold;
   }
 
 /* Footer */
@@ -156,4 +172,50 @@ table {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media 
+only screen and (max-width: 760px){
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+        width: auto;
+        font-size: small;
+	}
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr { 
+        border: 2px solid #5885af; 
+        
+    }
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #5885af; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 5px;
+		left: 5px;
+		width: 45%; 
+		padding-right: 10px; 
+	}
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Name"; }
+	td:nth-of-type(2):before { content: "Email"; }
+	td:nth-of-type(3):before { content: "Phone Number"; }
+	td:nth-of-type(4):before { content: "Date Hired"; }
+	td:nth-of-type(5):before { content: "Date Started"; }
+	td:nth-of-type(6):before { content: "Progress"; }
+	td:nth-of-type(7):before { content: "Feedback Rating"; }
 }
