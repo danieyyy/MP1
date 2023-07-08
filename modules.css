@@ -123,6 +123,7 @@ body{
     margin-left: 15%;
     display: flex;
     overflow: scroll;
+    height: 100%;
 }
 
 .contentMain {
