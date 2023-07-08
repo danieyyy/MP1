@@ -124,7 +124,7 @@ body{
     margin-left: 16%;
     color: #274472;
     overflow: scroll;
-    height: 100vh;
+    height: 100%;
 }
 
 .titleHead{
